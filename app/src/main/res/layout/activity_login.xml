@@ -125,8 +125,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.9"
-        app:boxStrokeColor="#DDDDDD"
-        app:boxCornerRadius="8dp">
+        app:boxStrokeColor="#DDDDDD">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"

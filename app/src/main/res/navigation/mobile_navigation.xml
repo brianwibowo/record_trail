@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_navigator">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.dicoding.recordtrail.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/navigation_navigator"
+        android:name="com.dicoding.recordtrail.ui.navigator.NavigatorFragment"
+        android:label="@string/title_navigator"
+        tools:layout="@layout/fragment_navigator" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.dicoding.recordtrail.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_profile"
+        android:name="com.dicoding.recordtrail.ui.Profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.dicoding.recordtrail.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_recordtrail"
+        android:name="com.dicoding.recordtrail.ui.recordtrail.RecordTrailFragment"
+        android:label="@string/title_record_trail"
+        tools:layout="@layout/fragment_record_trail" />
 </navigation>
