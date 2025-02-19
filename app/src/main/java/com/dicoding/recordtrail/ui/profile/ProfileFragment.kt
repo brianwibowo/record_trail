@@ -1,35 +1,30 @@
-package com.dicoding.recordtrail.ui.navigator
+package com.dicoding.recordtrail.ui.profile
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.dicoding.recordtrail.MapsActivity
-import com.dicoding.recordtrail.databinding.FragmentNavigatorBinding
+import com.dicoding.recordtrail.databinding.FragmentProfileBinding
 
-
-class NavigatorFragment : Fragment() {
-    private var _binding: FragmentNavigatorBinding? = null
+class ProfileFragment : Fragment() {
+    private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentNavigatorBinding.inflate(inflater, container, false)
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Navigasi ke MapsActivity saat tombol diklik
-        binding.btnMaps.setOnClickListener {
-            val intent = Intent(requireContext(), MapsActivity::class.java)
-            startActivity(intent)
-        }
+        // Ubah title ActionBar saat fragment ini ditampilkan
+        (activity as? AppCompatActivity)?.supportActionBar?.title = "Profile"
     }
 
     override fun onDestroyView() {

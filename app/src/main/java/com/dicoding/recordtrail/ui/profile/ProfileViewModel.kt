@@ -1,4 +1,4 @@
-package com.dicoding.recordtrail.ui.Profile
+package com.dicoding.recordtrail.ui.profile
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

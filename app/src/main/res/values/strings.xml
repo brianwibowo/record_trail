@@ -3,4 +3,9 @@
     <string name="title_navigator">Navigator</string>
     <string name="title_profile">Profile</string>
     <string name="title_record_trail">Record Trail</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
 </resources>

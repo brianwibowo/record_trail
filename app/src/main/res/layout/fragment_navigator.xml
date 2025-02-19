@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -15,19 +16,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/header_image"
         app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- Welcome Text -->
-    <TextView
-        android:id="@+id/welcomeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome back,\nBambang’s Family"
-        android:textSize="20sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/headerBackground"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintMargin="16dp"/>
 
     <!-- User Info Card -->
     <androidx.cardview.widget.CardView
@@ -48,15 +36,21 @@
             android:orientation="vertical">
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="User: Bambang Suratno"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Age: 67"
                 android:textSize="16sp"/>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Status: Offline"
                 android:textSize="16sp"
                 android:textColor="@android:color/holo_red_dark"/>
@@ -81,19 +75,6 @@
         app:layout_constraintTop_toBottomOf="@id/userCard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
-        <TextView
-            android:text="Can't connect to device? Click to"
-            android:textSize="14sp"
-            android:layout_weight="1"/>
-
-        <Button
-            android:id="@+id/btnConnect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Connect"
-            android:backgroundTint="@color/gray"
-            android:textColor="@android:color/black"/>
     </LinearLayout>
 
     <!-- GridView Menu -->
@@ -102,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/btnConnect"
+        app:layout_constraintTop_toBottomOf="@id/userCard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -120,11 +101,6 @@
                 android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/maps_thumbnail"/>
-
-            <TextView
-                android:text="Navigator"
-                android:textSize="16sp"
-                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
 
         <!-- Record Trail Card -->
@@ -140,11 +116,33 @@
                 android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/record_trail_thumbnail"/>
-
-            <TextView
-                android:text="Record Trail"
-                android:textSize="16sp"
-                android:padding="8dp"/>
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnMaps"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/black"
+        android:text="Navigator"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnRecord"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userCard" />
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="141dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="144dp"
+        android:backgroundTint="@color/black"
+        android:text="Record Trail"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnMaps"
+        app:layout_constraintTop_toBottomOf="@id/userCard" />
 </androidx.constraintlayout.widget.ConstraintLayout>

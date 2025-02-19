@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class GetStartedActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_get_started)
 
         val btnGetStarted = findViewById<Button>(R.id.btnGetStarted)
